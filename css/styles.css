@@ -75,15 +75,12 @@ nav > ul > li:last-of-type {
 /* Main .landing-intro */
 .landing-intro-container {
   background-color: hsl(256, 26%, 20%);
-  position: relative;
 }
 
 .landing-intro {
   color: hsl(0, 0%, 100%);
   padding: 6rem 0;
-  background-image: url('../images/bg-pattern-intro-left-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: top left;
+  position: relative;
 }
 
 #img-landing-intro {
@@ -115,12 +112,20 @@ nav > ul > li:last-of-type {
   cursor: pointer;
 }
 
+#bg-pattern-intro-left-mobile {
+  width: 33%;
+  height: auto;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
 #bg-pattern-intro-right-mobile {
   width: 33%;
   height: auto;
   position: absolute;
   right: 0;
-  bottom: -20%;
+  bottom: -31%;
 }
 
 /* Main .landing-qualities-container */
@@ -173,15 +178,23 @@ nav > ul > li:last-of-type {
   margin: 9rem auto;
   padding: 4.5rem 0;
   color: hsl(0, 0%, 100%);
-  background-image: url('../images/bg-pattern-how-we-work-mobile.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
+  position: relative;
+}
+
+.landing-how-we-work > #bg-how-we-work {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .landing-how-we-work > h2 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 3;
 }
 /* Footer */
 footer {
@@ -240,4 +253,256 @@ footer {
 }
 
 @media (min-width: 376px) {
+  /* Header */
+  nav > ul {
+    background-size: contain;
+  }
+
+  nav > ul > li {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Main */
+  #bg-pattern-intro-right-mobile {
+    width: 27%;
+  }
+
+  .landing-how-we-work > #bg-how-we-work {
+    width: 40%;
+  }
+
+  /* Footer */
+  footer {
+    background-image: url('../images/bg-pattern-footer-desktop.svg');
+  }
+}
+
+@media (min-width: 576px) {
+  /* Header */
+  #nav-hamburger, #nav-btn-close {
+    display: none;
+  }
+  
+  nav > ul {
+    width: auto;
+    height: auto;
+    position: initial;
+    left: initial;
+    top: initial;
+    z-index: 0;
+    background-image: none;
+    background-color: transparent;
+    padding: 0;
+    color: hsl(273, 4%, 51%);
+    display: flex !important;
+  }
+  
+  nav > ul > li {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  
+  nav > ul > li:hover {
+    color: hsl(270, 9%, 17%);
+    background-color: transparent;
+  }
+  
+  nav > ul > li:last-of-type {
+    border: none;
+    padding: 0;
+  }
+  /* Main */
+  .landing-intro-container {
+    position: relative;
+  }
+  
+  #img-landing-intro {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2rem 3rem 0 0;
+    width: 40%;
+    height: auto;
+  }
+  
+  .landing-intro {
+    width: 65%;
+    position: initial;
+    text-align: start;
+    padding: 2rem 3rem;
+  }
+
+  .landing-intro {
+    background-image: none;
+  }
+
+  .landing-intro > h2, .landing-intro > div {
+    margin: 0;
+  }
+
+  .landing-intro > h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .landing-intro > div {
+    margin: 2rem 0;
+  }
+
+  #bg-pattern-intro-left-mobile {
+    content: url(../images/bg-pattern-intro-left-desktop.svg);
+    top: initial;
+    width: 20%;
+  }
+
+  #bg-pattern-intro-right-mobile {
+    content: url('../images/bg-pattern-intro-right-desktop.svg');
+    top: 0;
+    bottom: inherit;
+    width: 25%;
+  }
+  /* Footer */
+}
+
+@media (min-width: 767px) {
+  #img-landing-intro {
+    width: 30%;
+  }
+
+  .landing-intro > h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  #bg-pattern-intro-left-mobile {
+    width: 15%;
+  }
+
+  #bg-pattern-intro-right-mobile {
+    width: 20%;
+  }
+
+  .landing-how-we-work > #bg-how-we-work {
+    content: url('../images/bg-pattern-how-we-work-desktop.svg');
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  #img-landing-intro {
+    margin: 4rem 6rem 4rem 0;
+  }
+  .landing-intro {
+    width: 65%;
+    padding: 4rem 6rem;
+  }
+
+  #bg-pattern-intro-left-mobile {
+    width: 10%;
+  }
+  
+  .landing-qualities-container {
+    padding: 15rem 5rem 0 5rem;
+    text-align: start;
+  }
+
+  .landing-qualities-container > h2::before {
+    left: 0;
+    width: 20%;
+    transform: none;
+  }
+
+  .qualities-list {
+    display: flex;
+  }
+
+  .qualities-list-item > div {
+    margin-left: 0;
+  }
+
+  .landing-how-we-work {
+    width: auto;
+    margin: 4.5rem 5rem;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+  }
+
+  .landing-how-we-work > #bg-how-we-work {
+    width: 40%;
+  }
+
+  .landing-how-we-work > h2 {
+    width: 55%;
+    font-size: 2.85rem;
+    margin-bottom: 0;
+  }
+
+  .landing-how-we-work > #btn-how-we-work {
+    height: max-content;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 5rem;
+    text-align: start;
+  }
+
+  .footer-header {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-header > h2 {
+    margin-bottom: 0;
+  }
+
+  .footer-social-media-list {
+    width: 20%;
+    margin: 0;
+  }
+
+  .footer-helpful-links-list {
+    width: 100%;
+    margin: 0;
+    display: flex;
+  }
+
+  .footer-helpful-links-column:nth-child(n+2) {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #img-landing-intro {
+    width: 25%;
+  }
+
+  #bg-pattern-intro-right-mobile {
+    width: 17.5%;
+  }
+
+  .landing-how-we-work > #bg-how-we-work {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1440px) {
+  #bg-pattern-intro-left-mobile {
+    width: 7.5%;
+  }
+
+  #bg-pattern-intro-right-mobile {
+    width: 15%;
+  }
+
+  .landing-how-we-work > #bg-how-we-work {
+    width: 25%;
+  }
 }
